@@ -1,0 +1,22 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.acme.grpc";
+
+package document;
+
+service DocumentProcessor {
+  rpc Process(DocumentRequest) returns (DocumentResponse) {}
+}
+
+message DocumentRequest {
+  string documentId = 1;
+}
+
+message DocumentResponse {
+  string status = 1;
+}
+
+
+
