@@ -24,7 +24,7 @@ public class ServiceRegistery {
                 new ConsulClientOptions().setHost(host).setPort(port));
 
         client.registerServiceAndAwait(
-                new ServiceOptions().setPort(gatewayPort).setAddress("localhost")
+                new ServiceOptions().setPort(gatewayPort).setAddress(host)
                         .setName(apiGateway).setId(apiGateway));
 
     }
